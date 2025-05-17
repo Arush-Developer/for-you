@@ -51,6 +51,22 @@
       margin-top: 20px;
     }
 
+    button {
+      margin-top: 30px;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border: none;
+      background-color: #e84393;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #d63031;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -95,7 +111,9 @@
 
     <div class="hearts">❤️ 💖 💕</div>
 
-    <audio autoplay loop>
+    <button onclick="document.getElementById('music').play()">🎵 Play Music</button>
+
+    <audio id="music" loop>
       <source src="your-song.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
